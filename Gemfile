@@ -5,6 +5,11 @@ gem 'rails', '3.0.7'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+# do this for heroku deployment because it not support sqlite
+group :production, :staging do
+  gem "pg"
+end
+
 # gem 'sqlite3'
 gem 'sqlite3-ruby', '1.3.2', :require => 'sqlite3'
 
